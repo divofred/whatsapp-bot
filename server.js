@@ -1,6 +1,6 @@
 require('dotenv').config()
 const qrcode = require('qrcode-terminal');
-const { Client, LocalAuth } = require('whatsapp-web.js');
+const { Client } = require('whatsapp-web.js');
 const  {Configuration, OpenAIApi} = require('openai')
 
 const config = new Configuration({
@@ -17,7 +17,6 @@ async function runCompletion(message){
   return completion.data.choices[0].text
 }
 const client = new Client({
-  authStrategy: new LocalAuth(),
   puppeteer: {
     args: ['--no-sandbox'],
   },
