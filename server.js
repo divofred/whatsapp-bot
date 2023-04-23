@@ -15,11 +15,7 @@ async function runCompletion(message) {
   });
   return completion.data.choices[0].text;
 }
-const client = new Client({
-  puppeteer: {
-    args: ['--no-sandbox'],
-  },
-});
+const client = new Client();
 
 client.on('qr', qr => {
   qrcode.generate(qr, { small: true });
