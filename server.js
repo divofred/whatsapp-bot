@@ -59,6 +59,9 @@ client.on('message', async message => {
       if (lowerMessage.includes('btc') || lowerMessage.includes('bitcoin')) {
         return message.reply(`Current bitcoin rate is ${btc}`);
       }
+      if (lowerMessage.includes('vp') || lowerMessage.includes('vice president')) {
+        return message.reply(`Fredrick Emmanuel`);
+      }
       if (lowerMessage.includes('hello')) {
         return message.reply('Hi');
       }
