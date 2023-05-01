@@ -68,7 +68,7 @@ client.on('message', async message => {
       if (lowerMessage.includes('eth') || lowerMessage.includes('ethereum')) {
         return message.reply(`Current ethereum rate is ${eth}`);
       }
-      if (lowerMessage.includes('!everyone') {
+      if (lowerMessage.includes('!everyone')) {
         if (chat.isGroup) {
           let text = '';
           let mentions = [];
